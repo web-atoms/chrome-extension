@@ -1,5 +1,5 @@
-# chrome-extension
-Chrome Extension to Inspect Properties
+# Chrome and Edge Extension
+Install Chrome Extension for Microsoft Edge to Inspect Properties
 
 1. Create folder `d:\edge\extensions`
 2. Download [`web-atoms-chrome-extension.zip`](https://github.com/web-atoms/chrome-extension/raw/master/web-atoms-chrome-extension.zip) file
