@@ -19,6 +19,14 @@ var page_getProperties = function() {
 
       // this is TSX based new Web Atoms
       if (t.app) {
+          if(!t.AtomType__) {
+            const pt = Object.getPrototypeOf(t);
+            if (pt && pt.constructor) {
+                t.AtomType__ = pt.constructor.name;
+            } else {
+                t.AtomType__ = "Object";
+            }
+          }
           return t;
       }
 
@@ -29,7 +37,7 @@ var page_getProperties = function() {
       for (var k in t) {
           if (/^get_/gi.test(k)) {
               var f = t[k];
-              var n = k.substr(4);
+              var n = k.substring(4);
               if (/^(events|children|owner|visible|cssPrefix)/gi.test(n))
                   continue;
               var v = undefined;
